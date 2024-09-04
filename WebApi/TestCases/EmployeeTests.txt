@@ -1,0 +1,57 @@
+﻿curl -X POST "http://localhost:51480/api/employee" -H "Content-Type: application/json" -d '{
+     \"EmployeeCode\": \"12345\",
+     \"EmployeeName\": \"Dale Smith\",
+     \"CompanyName\": \"Softball League\",
+     \"CompanyCode\": \"12345\",
+     \"SiteId\": \"A123\",
+     \"OccupationName\": \"Sr. Developer\",
+     \"EmployeeStatus\": \"Fulltime\",
+     \"EmailAddress\": \"ds@gmail.com\",
+     \"PhoneNumber\": \"905-555-1234\",
+     \"LastModifiedDateTime\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X POST "http://localhost:51480/api/employee" -H "Content-Type: application/json" -d '{
+     \"EmployeeCode\": \"67890\",
+     \"EmployeeName\": \"Carol Smith\",
+     \"CompanyName\": \"Softball League\",
+     \"CompanyCode\": \"67890\",
+     \"SiteId\": \"A123\",
+     \"OccupationName\": \"Int. Developer\",
+     \"EmployeeStatus\": \"Fulltime\",
+     \"EmailAddress\": \"cs@gmail.com\",
+     \"PhoneNumber\": \"905-555-3333\",
+     \"LastModifiedDateTime\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X POST "http://localhost:51480/api/employee" -H "Content-Type: application/json" -d '{
+     \"EmployeeCode\": \"98765\",
+     \"EmployeeName\": \"John Smith\",
+     \"CompanyName\": \"Softball League\",
+     \"CompanyCode\": \"98765\",
+     \"SiteId\": \"A123\",
+     \"OccupationName\": \"Jr. Developer\",
+     \"EmployeeStatus\": \"Fulltime\",
+     \"EmailAddress\": \"js@gmail.com\",
+     \"PhoneNumber\": \"905-555-4444\",
+     \"LastModifiedDateTime\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X PUT "http://localhost:51480/api/employee/id?employeeCode=67890" -H "Content-Type: application/json" -d '{
+     \"EmployeeCode\": \"67890\",
+     \"EmployeeName\": \"Carol Newman\",
+     \"CompanyName\": \"Softball League\",
+     \"CompanyCode\": \"67890\",
+     \"SiteId\": \"A123\",
+     \"OccupationName\": \"Int. Developer\",
+     \"EmployeeStatus\": \"Parttime\",
+     \"EmailAddress\": \"cs@gmail.com\",
+     \"PhoneNumber\": \"905-555-3333\",
+     \"LastModifiedDateTime\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X GET "http://localhost:51480/api/employee"
+
+curl -X GET "http://localhost:51480/api/employee/id?employeeCode=67890"
+
+curl -X DELETE "http://localhost:51480/api/employee/id?employeeCode=67890"

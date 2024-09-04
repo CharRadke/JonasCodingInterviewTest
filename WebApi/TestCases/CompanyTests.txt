@@ -1,0 +1,66 @@
+﻿curl -X POST "http://localhost:51480/api/company" -H "Content-Type: application/json" -d '{
+     \"CompanyName\": \"Major League Ball\",
+     \"CompanyCode\": \"12345\",
+     \"SiteId\": \"A123\",
+     \"AddressLine1\": \"123 Main St\",
+     \"AddressLine2\": \"Suite 202\",
+     \"AddressLine3\": \"Building A\",
+     \"PostalZipCode\": \"L9L1B1\",
+     \"PhoneNumber\": \"905-555-1234\",
+     \"FaxNumber\": \"905-555-5678\",
+     \"EquipmentCompanyCode\": \"EQC123\",
+     \"Country\": \"Canada\",
+     \"LastModified\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X POST "http://localhost:51480/api/company" -H "Content-Type: application/json" -d '{
+     \"CompanyName\": \"Softball League\",
+     \"CompanyCode\": \"67890\",
+     \"SiteId\": \"A456\",
+     \"AddressLine1\": \"123 King St\",
+     \"AddressLine2\": \"Suite 2B\",
+     \"AddressLine3\": \"Building C\",
+     \"PostalZipCode\": \"L9L1B1\",
+     \"PhoneNumber\": \"905-555-1234\",
+     \"FaxNumber\": \"905-555-5678\",
+     \"EquipmentCompanyCode\": \"EQC456\",
+     \"Country\": \"Canada\",
+     \"LastModified\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X POST "http://localhost:51480/api/company" -H "Content-Type: application/json" -d '{
+     \"CompanyName\": \"T-Ball League\",
+     \"CompanyCode\": \"98765\",
+     \"SiteId\": \"T999\",
+     \"AddressLine1\": \"999 Main St\",
+     \"AddressLine2\": \"Suite 545\",
+     \"AddressLine3\": \"Building A\",
+     \"PostalZipCode\": \"L9L1B1\",
+     \"PhoneNumber\": \"905-555-1234\",
+     \"FaxNumber\": \"905-555-5678\",
+     \"EquipmentCompanyCode\": \"EQC222\",
+     \"Country\": \"Canada\",
+     \"LastModified\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X PUT "http://localhost:51480/api/company/id?companyCode=67890" -H "Content-Type: application/json" -d '{
+    \"CompanyName\": \"WTFF\",
+    \"CompanyCode\": \"67890\",
+    \"SiteId\": \"A456\",
+    \"AddressLine1\": \"123 King St\",
+    \"AddressLine2\": \"Suite 2B\",
+    \"AddressLine3\": \"Building C\",
+    \"PostalZipCode\": \"L9L1B1\",
+    \"PhoneNumber\": \"905-555-1234\",
+    \"FaxNumber\": \"905-555-5678\",
+    \"EquipmentCompanyCode\": \"EQC456\",
+    \"Country\": \"Canada\",
+    \"LastModified\": \"2024-08-30T00:00:00\"
+}'
+
+curl -X GET "http://localhost:51480/api/company"
+
+curl -X GET "http://localhost:51480/api/company/id?companyCode=67890"
+
+curl -X DELETE "http://localhost:51480/api/company/id?companyCode=67890"
+
